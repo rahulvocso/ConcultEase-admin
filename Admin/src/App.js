@@ -1,27 +1,27 @@
-import PropTypes from 'prop-types';
-import React from "react";
-import { Routes, Route } from 'react-router-dom';
-import { connect } from "react-redux";
+import PropTypes from "prop-types"
+import React from "react"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import { connect } from "react-redux"
 
 // Import Routes all
-import { userRoutes, authRoutes } from "./routes/allRoutes";
+import { userRoutes, authRoutes } from "./routes/allRoutes"
 
 // Import all middleware
-import Authmiddleware from "./routes/middleware/Authmiddleware";
+import Authmiddleware from "./routes/middleware/Authmiddleware"
 
 // layouts Format
-import NonAuthLayout from "./components/NonAuthLayout";
+import NonAuthLayout from "./components/NonAuthLayout"
 
 // Import scss
-import "./assets/scss/theme.scss";
+import "./assets/scss/theme.scss"
 
 // Import Firebase Configuration file
 // import { initFirebaseBackend } from "./helpers/firebase_helper"
 
-import fakeBackend from "./helpers/AuthType/fakeBackend";
+import fakeBackend from "./helpers/AuthType/fakeBackend"
 
 // Activating fake backend
-fakeBackend();
+fakeBackend()
 
 // const firebaseConfig = {
 //   apiKey: process.env.REACT_APP_APIKEY,
@@ -45,11 +45,7 @@ const App = () => {
           {authRoutes.map((route, idx) => (
             <Route
               path={route.path}
-              element={
-                <NonAuthLayout>
-                  {route.component}
-                </NonAuthLayout>
-              }
+              element={<NonAuthLayout>{route.component}</NonAuthLayout>}
               key={idx}
               exact={true}
             />
@@ -60,10 +56,7 @@ const App = () => {
           {userRoutes.map((route, idx) => (
             <Route
               path={route.path}
-              element={
-                <Authmiddleware>
-                  {route.component}
-                </Authmiddleware>}
+              element={<Authmiddleware>{route.component}</Authmiddleware>}
               key={idx}
               exact={true}
             />
@@ -71,17 +64,17 @@ const App = () => {
         </Route>
       </Routes>
     </React.Fragment>
-  );
-};
+  )
+}
 
 App.propTypes = {
-  layout: PropTypes.any
-};
+  layout: PropTypes.any,
+}
 
 const mapStateToProps = state => {
   return {
     layout: state.Layout,
-  };
-};
+  }
+}
 
-export default connect(mapStateToProps, null)(App);
+export default connect(mapStateToProps, null)(App)

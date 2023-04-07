@@ -49,7 +49,7 @@ const Dashboard = props => {
   const toggle = () => {
     setMenu(!menu);
   };
-  document.title = "Dashboard | Veltrix - React Admin & Dashboard Template";
+  document.title = "Dashboard | ConsultEase - React Admin & Dashboard Template";
   return (
     <React.Fragment>
       <div className="page-content">
@@ -59,7 +59,7 @@ const Dashboard = props => {
               <Col md={8}>
                 <h6 className="page-title">Dashboard</h6>
                 <ol className="breadcrumb m-0">
-                  <li className="breadcrumb-item active">Welcome to Veltrix Dashboard</li>
+                  <li className="breadcrumb-item active">Welcome to ConsultEase Admin Dashboard</li>
                 </ol>
               </Col>
 

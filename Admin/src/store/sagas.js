@@ -7,7 +7,7 @@ import ForgetSaga from "./auth/forgetpwd/saga"
 import ProfileSaga from "./auth/profile/saga"
 import LayoutSaga from "./layout/saga"
 import calendarSaga from "./calendar/saga"
-
+import ConsultEaseSaga from "./consultease/saga"
 
 export default function* rootSaga() {
   yield all([
@@ -18,5 +18,6 @@ export default function* rootSaga() {
     ForgetSaga(),
     LayoutSaga(),
     fork(calendarSaga),
+    ConsultEaseSaga(),
   ])
 }

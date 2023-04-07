@@ -8,3 +8,6 @@ export * from "./auth/profile/actions"
 
 //Calendar
 export * from "./calendar/actions"
+
+//ConsultEase
+export * from "./consultease/actions"

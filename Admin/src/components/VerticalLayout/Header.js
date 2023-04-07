@@ -32,7 +32,7 @@ const Header = props => {
 
   const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
-  function toggleFullscreen() {
+  function toggleF0ullscreen() {
     if (
       !document.fullscreenElement &&
       /* alternative standard method */ !document.mozFullScreenElement &&

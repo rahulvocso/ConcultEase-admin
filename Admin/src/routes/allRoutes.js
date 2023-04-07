@@ -40,6 +40,12 @@ import TwostepVerification2 from "../pages/AuthenticationInner/auth-two-step-ver
 
 // Dashboard
 import Dashboard from "../pages/Dashboard/index"
+
+// ConsultEaseComponents
+import ProfileSearch from "../pages/ConsultEase/ProfileSearch.js"
+import ProfileSearchResults from "../pages/ConsultEase/ProfileSearchResults"
+import ProfileView from "../pages/ConsultEase/ProfileView"
+
 // Charts
 import ChartApex from "../pages/Charts/Apexcharts"
 import ChartistChart from "../pages/Charts/ChartistChart"
@@ -116,7 +122,18 @@ import PagesProfile from "pages/Utility/pages-profile"
 const userRoutes = [
   { path: "/dashboard", component: <Dashboard /> },
 
-  // //calendar
+  //consultase user
+  {
+    path: "/consultease-profile-search",
+    component: <ProfileSearch />,
+  },
+  {
+    path: "/consultease-profile-search-results",
+    component: <ProfileSearchResults />,
+  },
+  { path: "/consultease-profile-view", component: <ProfileView /> },
+
+  //calendar
   { path: "/calendar", component: <Calendar /> },
 
   // //profile

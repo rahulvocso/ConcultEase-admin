@@ -12,6 +12,9 @@ import Profile from "./auth/profile/reducer"
 //Calendar
 import calendar from "./calendar/reducer"
 
+//ConsultEase
+import ConsultEase from "./consultease/reducer"
+
 const rootReducer = combineReducers({
   // public
   Layout,
@@ -20,6 +23,7 @@ const rootReducer = combineReducers({
   ForgetPassword,
   Profile,
   calendar,
+  ConsultEase,
 })
 
 export default rootReducer
